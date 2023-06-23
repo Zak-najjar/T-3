@@ -41,3 +41,144 @@ ul {
     width: 1170px;
   }
 }
+
+
+
+header {
+  font-size: 20px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .container > a {
+  font-size: 25px;
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: bold;
+  padding: 25px;
+}
+header .container nav > ul {
+  display: flex;
+}
+
+
+header .container nav > ul > li > a::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: var(--main-color);
+  transition: 0.3s all;
+}
+
+header .container nav > ul > li > a:hover::before {
+  width: 100%;
+}
+
+header .container nav > ul > li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  position: relative;
+  color: black;
+  padding: 0 30px;
+  overflow: hidden;
+  font-size: 18px;
+  transition: .3s;
+  text-decoration: none;
+}
+
+
+header .container nav > ul > li > a:hover {
+  background-color: #fafafa;
+  color: var(--main-color);
+}
+
+
+
+
+header .container nav > ul > li:nth-child(4):hover > .other {
+  opacity: 1;
+  z-index: 100;
+  overflow: visible;
+  top: calc(130px - 50px);
+}
+
+.other {
+  position: absolute;
+  content: '';
+  left: 50%;
+  top: 130px;
+  transform: translateX(-51%);
+  display: flex;
+  background-color: white;
+  padding: 30px;
+  border-bottom: 3px solid var(--main-color);
+  z-index: -1;
+  opacity: 0;
+  transition: .5s all;
+}
+
+.other img {
+  margin-right: 35px;
+}
+
+.other > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.other ul li:not(li:nth-child(5)){
+  border-bottom: 1px solid gray;
+}
+
+.other-num {
+display: flex;
+color: var(--main-color-alt);
+gap: 50px;
+}
+
+.other-num .num1, .num2 {
+width: 255px;
+}
+.other-num  a {
+text-decoration: none;
+color: var(--main-color);
+padding: 15px;
+display: block;
+font-size: 18px;
+font-weight: bold;
+}
+
+.other-num li {
+position: relative;
+}
+
+.other-num i {
+margin-right: 15px;
+}
+
+.other-num li::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: .3s all;
+  background-color: #fafafa;
+  z-index: -1;
+}
+
+.other-num li:hover::before {
+  width: 100%;
+}
+
+
+
