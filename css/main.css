@@ -456,9 +456,15 @@ margin-right: 15px;
   border-bottom: 1px solid #9a9999;
 }
 
+.articles .container > .boxes .box > .text h3{
+  margin: 0;
+}
+
+
 .articles .container > .boxes .box > .text p {
   opacity: .7;
   line-height: 1.5;
+  margin: 10px 0 0;
 }
 
 .articles .container > .boxes .box > footer {
