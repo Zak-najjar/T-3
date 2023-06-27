@@ -45,7 +45,8 @@ ul {
 }
 
 .main-title {
-  margin: 100px auto;
+  margin: auto;
+  margin-bottom: 80px;
   border: 2px solid black;
   padding: 10px 20px;
   font-size: 30px;
@@ -501,4 +502,85 @@ margin-right: 15px;
   40%, 60% {
     transform: translateX(15px);
   }
+}
+
+
+
+
+
+.gallery {
+  background-color: #eee;
+  padding-top: 80px;
+  padding-bottom: var(--padding);
+  position: relative;
+}
+
+.spikes::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+  background-size: 30px 30px;
+}
+
+
+.spikes {
+  position: relative;
+}
+
+.gallery .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.gallery .container .box {
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery .container .box .image {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery .container .box .image::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 20%);
+  opacity: 0;
+  z-index: 2;
+}
+
+.gallery .container .box .image:hover::before {
+  animation: flashing .7s;
+}
+
+@keyframes flashing {
+  0%, 40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
+
+
+.gallery .container .box img {
+  max-width: 100%;
+  transition: var(--main-transition);
+}
+
+.gallery .container .box .image:hover img {
+  transform: rotate(5deg) scale(1.1);
 }
