@@ -634,6 +634,12 @@ margin-right: 15px;
   border-width: 170px 500px 170px 0;
 }
 
+@media (max-width: 767px) {
+  .features .container .conte:hover .img-holder::after {
+    border-width: 170px 710px 170px 0 !important;
+  }
+  
+}
 
 .features .container .conte img {
   max-width: 100%;
