@@ -822,3 +822,36 @@ margin-right: 15px;
 .testimonials .container .box .filled {
   color: #ffc107;
 }
+
+
+.team {
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+  position: relative;
+}
+
+.team .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.team .container .box {
+  position: relative;
+}
+
+.team .container .box::before {
+  content: "";
+  position: absolute;
+  background-color: #f3f3f3;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: calc(100% - 60px);
+  border-radius: 10px;
+  z-index: -2;
+}
+
+.team .container .box .data img {
+  width: 100%;
+}
