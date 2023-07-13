@@ -1026,3 +1026,52 @@ margin-right: 15px;
   color: var(--main-color);
   text-decoration: none;
 }
+
+.skills {
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+  position: relative;
+}
+
+.skills .container {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width:991px) {
+  .skills img {
+    display: none;
+  }
+}
+
+.skills .skill {
+  flex: 1;
+}
+
+.skills .skill h3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skills .skill h3 span{
+  font-size: 12px;
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+  border-radius: 4px;
+  color: var(--main-color);
+}
+
+.skills .skill .the-progress{
+  height: 30px;
+  background-color: #eee;
+  position: relative;
+}
+.skills .skill .the-progress span{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: var(--main-color);
+}
