@@ -1301,3 +1301,145 @@ margin-right: 15px;
 }
 
 
+.pricing {
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+  background-color: var(--section-background);
+}
+
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(345px, 1fr));
+  gap: 30px;
+}
+
+.pricing .container .box {
+  background-color: white;
+  text-align: center;
+  box-shadow: 
+  0 12px 20px 0 rgba(0, 0, 0, 13%),
+  0 2px 4px 0 rgba(0, 0, 0, 12%);
+  position: relative;
+  z-index: 1;
+}
+
+.pricing .box::before,
+.pricing .box::after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  background-color: #f6f6f6;
+  width: 0;
+  transition: var(--main-transition);
+  z-index: -1;
+}
+
+.pricing .box::before {
+  top: 0;
+  left: 0;
+}
+.pricing .box::after {
+  bottom: 0;
+  right: 0;
+}
+
+.pricing .box:hover::before,
+.pricing .box:hover::after {
+  width: 100%;
+}
+
+.pricing .container .box .title {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  padding-top: 35px;
+}
+
+.pricing .container .box.popular {
+  top: 0;
+}
+
+@media (min-width: 1200px) {
+  .pricing .container .box.popular {
+    top: -20px;
+  }
+}
+
+.pricing .container .box img {
+  width: 90px;
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+
+
+.pricing .container .box .price {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing .container .box .price .amount {
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--main-color);
+  margin-bottom: 5px;
+}
+
+
+.pricing .container .box .price .time {
+  margin-bottom: 20px;
+  opacity: .7;
+}
+
+.pricing .container .box ul li {
+  padding: 20px;
+  text-align: left;
+  border-top: 1px solid #eee;
+}
+
+.pricing .container .box ul li:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  margin-right: 10px;
+  font-weight: 900;
+  color: var(--main-color);
+}
+
+.pricing .container .box a {
+  margin:30px auto 40px;
+  display: block;
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: bold;
+  padding: 15px 20px;
+  border: 2px solid var(--main-color);
+  border-radius: 6px;
+  width: fit-content;
+  transition: var(--main-transition);
+}
+
+.pricing .container .box a:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.pricing .container .popular .label {
+  position: absolute;
+  writing-mode: vertical-rl;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  padding: 10px 10px 35px 10px;
+  font-size: 18px;
+  right: 20px;
+  top: 0;
+}
+
+.pricing .container .popular .label::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  border-width: 20px;
+}
