@@ -1328,7 +1328,7 @@ margin-right: 15px;
   content: "";
   position: absolute;
   height: 50%;
-  background-color: #f6f6f6;
+  background-color: #77777719;
   width: 0;
   transition: var(--main-transition);
   z-index: -1;
@@ -1609,4 +1609,122 @@ margin-right: 15px;
   font-weight: bold;
   color: var(--main-color);
   font-style: italic;
+}
+
+
+.discount {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.discount .image {
+  background-image: url(../img/discount-background1.jpg);
+  background-size: cover;
+  color: white;
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  animation: change-background 10s linear infinite;
+}
+
+@keyframes change-background {
+  0%, 100% {
+    background-image: url(../img/discount-background1.jpg);
+  }
+  50% {
+    background-image: url(../img/discount-background2.jpg);
+  }
+}
+
+.discount .image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(23 135 224 / 97%);
+  z-index: -1;
+}
+
+@media (max-width: 991px) {
+  .discount .image {
+    flex-basis: 100%;
+  }
+}
+
+.discount .form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50%;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 991px) {
+  .discount .form {
+    flex-basis: 100%;
+  }
+}
+
+.discount .form .input {
+  display: block;
+  width: calc(100% - 30px);
+  margin-bottom: 25px;
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: #f9f9f9;
+  caret-color: var(--main-color);
+}
+
+.discount .form textarea.input {
+  resize: none;
+  height: 200px;
+}
+
+.discount .form .input:focus {
+  outline: none;
+}
+
+.discount .form [type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.discount .form [type="submit"]:hover {
+  background-color: var(--main-color-alt);
+}
+
+.discount .content {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.discount .content h2 {
+  font-size: 40px;
+  letter-spacing: -2px;
+}
+
+.discount .content p {
+  line-height: 1.6;
+  font-size: 18px;
+  max-width: 500px;
+}
+
+.discount .content img {
+  width: 300px;
+  max-width: 100%;
 }
