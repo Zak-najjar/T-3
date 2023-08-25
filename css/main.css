@@ -1728,3 +1728,144 @@ margin-right: 15px;
   width: 300px;
   max-width: 100%;
 }
+
+
+.end {
+  background-color: #171717;
+  color: white;
+  padding-top: 75px;
+}
+
+.end .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  gap: 40px;
+}
+
+
+
+.end .container .sec-1 h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+
+.end .container .sec-1 ul {
+  display: flex;
+  gap: 10px;
+}
+
+
+.end .container .sec-1 ul li a {
+  color: #b9b9b9;
+  font-size: 20px;
+  background-color: #313131;
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  transition: var(--main-transition);
+  text-decoration: none;
+}
+
+.end .container .sec-1 ul li .facebook:hover  {
+  background-color: #1877f2;
+}
+.end .container .sec-1 ul li .twitter:hover  {
+  background-color: #1da1f2;
+}
+.end .container .sec-1 ul li .youtube:hover  {
+  background-color: #ff0000;
+}
+
+.end .container .sec-1 p {
+  line-height: 2;
+  opacity: .7;
+  max-width: 100%;
+  margin-right: 10px;
+}
+
+.end .container .sec-2 li {
+  margin-bottom: 15px;
+  padding: 0 0 15px;
+}
+
+.end .container .sec-2 li:not(li:last-child) {
+  border-bottom: 1px solid #777;
+}
+
+.end .container .sec-2 li a {
+  color: white;
+  text-decoration: none;
+  opacity: .7;
+  transition: var(--main-transition);
+}
+
+.end .container .sec-2 li a:hover {
+  margin-left: 20px;
+  opacity: 1;
+}
+
+.end .container .sec-2 li a::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f101";
+  margin-right: 10px;
+  color: var(--main-color);
+}
+
+.end .container .sec-3 .line  {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.end .container .sec-3 i {
+  margin-right: 15px;
+  font-size: 25px;
+  color: var(--main-color);
+}
+
+.end .container .sec-3 p {
+  line-height: 2;
+  flex: 1;
+  margin: 0;
+  opacity: .7;
+}
+
+.end .container .sec-3 span {
+  flex-direction: column;
+}
+
+.end .container .sec-4 img {
+  width: 75px;
+  max-width: 100%;
+  border: 3px solid white;
+  margin: 2px;
+}
+.end .container .sec-4 {
+  gap: 20px;
+}
+
+.end .copyright { 
+  padding: 25px 0;
+  text-align: center;
+  color: white;
+  margin: 50px 0 0;
+  border-top: 1px solid #444;
+}
+
+
+@media (max-width:767px) {
+  .end {
+    text-align: center;
+  }
+  .end .container .sec-3 .line {
+    flex-direction: column;
+  }
+  .end .container .sec-1 ul {
+    justify-content: center;
+  }
+}
